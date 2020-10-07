@@ -1,6 +1,6 @@
 <?php 
 
-function laheta (){
+
 if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaute'])) {
 
     $data = 'palaute.txt' . $_POST['nimi'] . ' ' . $_POST['sahkoposti'] . ' ' . $_POST['palaute'] . "\n";
@@ -17,6 +17,6 @@ if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaut
 
   }
 
-}
+
 
 ?>

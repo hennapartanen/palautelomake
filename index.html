@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 
     <title>Palautelomake</title>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,20 +14,21 @@
 <center>
     <h2>Palautelomake</h2><br>
 
-    <form id="contactform" method="POST">
+    <form id="contactform" action="contactform.php" method="POST">
 
     <input type="text" name="nimi" placeholder="nimi"><br>
        
      <input type="email" name="sahkoposti" placeholder="sähköposti"><br><br>
 
-        <textarea name="palaute" id="" cols="30" rows="10" placeholder="palaute"></textarea><br>
+        <textarea name="palaute" cols="30" rows="10" placeholder="palaute"></textarea><br>
 
-        <input type="submit" value="Lähetä" onclick="laheta()"/>
+        <input type="submit" value="Lähetä" >
 
         </form>
 
     </center>
       
+    <a href="palaute.txt"><b>Katso palautteet<b></a>
 
      </body>
 
