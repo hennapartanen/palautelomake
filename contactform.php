@@ -1,21 +1,29 @@
-
-
+<link rel="stylesheet" href="style.css">
 <?php 
 
 
 if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaute'])) {
 
+ 
    
-    $data = 'palautteet.html' . $_POST['nimi'] . ' ' . $_POST['sahkoposti'] . ' ' . $_POST['palaute'] . "\n";
+    $data =  $_POST['nimi'] . "<br>"  . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
     $ret = file_put_contents('palautteet.html', $data, FILE_APPEND) ;
+    
+     
    
-   
-    if ($ret === false) {
-      echo "Ongelma palautetta lähettäessä";
-    } 
+
+    if (empty($_POST['nimi']) && empty($_POST['sahkoposti']) && empty($_POST['palaute'])) {
+      echo  "<p style='font-size:30px;'>" . "Ongelma palautetta lähettäessä" . "</p>";
+         $link_addresskaks = 'index.html';
+      echo "<a href='".$link_addresskaks."'>Takaisin etusivulle</a>";
+    }
+     
+
   
     else {
-      echo "Palaute on lähetetty!";
+      echo "<p style='font-size:30px;'>" . "Palaute on lähetetty!" . "</p>";
+         $link_address = 'palautteet.html';
+      echo "<a href='".$link_address."'>Katso palautteet</a>";
     }
    
 
