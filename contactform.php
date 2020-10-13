@@ -7,10 +7,12 @@
  
 if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaute'])) {
 
-  
+    $nimi = strip_tags($_POST['nimi']);
+    $sahkoposti = strip_tags($_POST['sahkoposti']);
+    $palaute = strip_tags($_POST['palaute']);
  
-    $data =  $_POST['nimi'] . " " . " " . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
-    $ret = file_put_contents('palautteet.php', $data, FILE_APPEND) ;  
+    $data =  '<div class="palaute">'.$nimi . " " . " " . $sahkoposti . "<br>" . $palaute . "</br></div>" ."\n\r" ;
+    $ret = file_put_contents("data.html", $data, FILE_APPEND) ;  
     
     
      
