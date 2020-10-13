@@ -8,7 +8,7 @@ if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaut
   
    
     $data =  $_POST['nimi'] . " " . " " . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
-    $ret = file_put_contents('palautteet.html', $data, FILE_APPEND) ;
+    $ret = file_put_contents('palautteet.php', $data, FILE_APPEND) ;
     
      
    
