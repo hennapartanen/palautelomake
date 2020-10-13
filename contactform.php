@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="style.css">
 <?php 
+ 
 
 
 if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaute'])) {
 
- 
+  
    
-    $data =  $_POST['nimi'] . "<br>"  . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
+    $data =  $_POST['nimi'] . " " . " " . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
     $ret = file_put_contents('palautteet.html', $data, FILE_APPEND) ;
     
      
