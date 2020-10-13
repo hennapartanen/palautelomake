@@ -1,14 +1,17 @@
 <link rel="stylesheet" href="style.css">
+
 <?php 
  
 
 
+ 
 if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaute'])) {
 
   
-   
+ 
     $data =  $_POST['nimi'] . " " . " " . $_POST['sahkoposti'] . "<br>" . $_POST['palaute'] . "</br>" ."\n\r" ;
-    $ret = file_put_contents('palautteet.php', $data, FILE_APPEND) ;
+    $ret = file_put_contents('palautteet.php', $data, FILE_APPEND) ;  
+    
     
      
    
@@ -23,14 +26,14 @@ if (isset($_POST['nimi']) && isset($_POST['sahkoposti']) && isset($_POST['palaut
   
     else {
       echo "<p style='font-size:30px;'>" . "Palaute on lähetetty!" . "</p>";
-         $link_address = 'palautteet.html';
+         $link_address = 'palautteet.php';
       echo "<a href='".$link_address."'>Katso palautteet</a>";
     }
    
-
+    
   }
 
 
-
+ 
 ?>
 
